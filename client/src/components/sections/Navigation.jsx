@@ -2,6 +2,7 @@ import Logo from "../icons/Logo";
 import MobileMenuIcon from "./MobileMenu/MobileMenuIcon";
 import { navigationLinks } from "../../utils/content";
 import { useModalContext } from "../../contexts/ModalContext";
+import { Link } from "react-router-dom";
 
 export default function Navigation() {
   const { setActiveModal } = useModalContext();
@@ -25,12 +26,12 @@ export default function Navigation() {
       <ul className="flex items-center gap-x-8 max-xl:gap-x-6 max-lg:hidden">
         {navigationLinks.map((link) => (
           <li key={link.id}>
-            <a
-              href={link.href}
+            <Link
+              to={link.href}
               className="hover:text-primary-500 transition-properties"
             >
               {link.link}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

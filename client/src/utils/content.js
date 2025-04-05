@@ -18,7 +18,7 @@ const navigationLinks = [
   {
     id: 1,
     link: "Home",
-    href: "#",
+    href: "/home",
   },
   {
     id: 2,
